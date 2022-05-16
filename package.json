@@ -7,7 +7,6 @@
   "description": "![apace](https://img.shields.io/badge/license-Apache%20License%202.0-blue) ## Description ```md AS A manager I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles ``` ## Table of Contents * [Description](#description) * [Installation](#installation) * [Usage](#usage) * [License](#license) * [Contributing](#contributing) * [Tests](#tests) * [Questions](#questions) ## Installation NO install required ## Usage",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
