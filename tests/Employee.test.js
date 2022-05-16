@@ -3,9 +3,10 @@ const Employee = require("../lib/Employee");
 describe("Employee", () => {
   describe("constructor", () => {
     it("should set `string` prop when given a string", () => {
-      const str = '';
-      const t = new Employee(str);
-      expect(t.str).toEqual(str);
+
+      const Mystr = ('Anthony',100,'anthony,diblasio@gmail.com');
+      const t = new Employee();
+      expect(Mystr).toEqual(t);
     });
   });
   describe("getEmployee", () => {

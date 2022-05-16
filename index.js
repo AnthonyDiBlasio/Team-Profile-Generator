@@ -84,7 +84,7 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'school',
-            mesage: 'Please enter college for intern',
+            message: 'Please enter college for intern',
             when: (input) => input.role === 'Intern',
         },
         {
@@ -132,11 +132,11 @@ const writeFile = data => {
 addManager()
     .then(addEmployee)
     .then(teamArray => {
-        // console.log(teamArray)
+       
         return generateHTML(teamArray);
     })
     .then(pageHTML => {
-        // console.log(pageHTML)
+
         return writeFile(pageHTML);
     })
     .catch(err => {

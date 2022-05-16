@@ -1,4 +1,4 @@
-const generateManager = function (manager) {
+const genManager = function (manager) {
   return (
   `
   <div class="col-4 mt-4">
@@ -19,7 +19,7 @@ const generateManager = function (manager) {
 };
 
 // creates card for engineer
-const generateEngineer = function (engineer) {
+const genEngineer = function (engineer) {
   return (
   `
   <div class="col-4 mt-4">
@@ -31,14 +31,14 @@ const generateEngineer = function (engineer) {
       <div class="card-body">
           <p class="id">ID: ${engineer.id}</p>
           <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-          <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+          <p class="github">Github: <a href="https://github.com/${engineer.github}"></a></p>
       </div>
   </div>
 </div>
   `);
 };
 
-const generateIntern = function (intern) {
+const genIntern = function (intern) {
   return (
   `
   <div class="col-4 mt-4">
@@ -62,23 +62,22 @@ generateHTML = (data) => {
 
   for (let i = 0; i < data.length; i++) {
       const employee = data[i];
-      const role = employee.getRoles();
+      const role = employee.getRole();
       console.log(role)
 
       if (role === 'Manager') {
-          const managerCard = generateManager(employee);
-         
-          // console.log(managerCard) // not getting mangagercard for some reason
+          const managerCard = genManager(employee);
+
           pageArray.push(managerCard);
       }
 
       if (role === 'Engineer') {
-          const engineerCard = generateEngineer(employee)
+          const engineerCard = genEngineer(employee)
 
           pageArray.push(engineerCard);
       }
       if (role === 'Intern') {
-          const internCard = generateIntern(employee);
+          const internCard = genIntern(employee);
 
           pageArray.push(internCard)
       }
@@ -132,36 +131,3 @@ const generateTeamPage = function (employeeCards) {
 };
 // export
 module.exports = generateHTML;
-// module.exports = (data) => {
-//     pageArray = [];
-//     console.log(data)
-//     for (let i = 0; i < data.length; i++) {
-//         const employee = data[i];
-//         const role = employee.getRole();
-
-//         if (role === 'Manager') {
-         
-//             const managerCard = generateManager(employee);
-//             console.log(managerCard) // not getting mangagercard for some reason
-//             pageArray.push(managerCard);
-//         }
-      
-//         if (role === 'Engineer') {
-//             const engineerCard = generateEngineer(employee)
-
-//             pageArray.push(engineerCard);
-//         }
-//         if (role === 'Intern') {
-//             const internCard = generateIntern(employee);
-
-//             pageArray.push(internCard)
-//         }
-
-//     }
-
-//     const employeeCards = pageArray.join('')
-
-//     const generateTeam = generateTeamPage(employeeCards);
-//     // console.log(generateTeam)
-//     return generateTeam;
-// };
