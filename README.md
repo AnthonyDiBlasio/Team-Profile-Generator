@@ -37,7 +37,8 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
-
+https://drive.google.com/file/d/1T1H-qHshDVn9KINQPMeCGydfdOQQ3HzO/view?usp=sharing
+!()
 ## License
 
 This application is covered by the Apache v2.0 License, the terms of which can be found [here](https://www.apache.org/licenses/LICENSE-2.0.txt).
