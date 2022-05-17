@@ -1,18 +1,18 @@
-// link to page creation
+// link to page
 const generateHTML = require('./src/Template');
 
-// team profiles
+// team profile
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 
-// node modules
+// node mods
 const fs = require('fs');
 const inquirer = require('inquirer');
 
 const teamArray = [];
 
-
+// prompts
 const addManager = () => {
     return inquirer.prompt ([
         {
